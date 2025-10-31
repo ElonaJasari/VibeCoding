@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f4f4f8;
+  --card: #ffffffcc;
+  --text: #222222;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg), #dbeafe);
+  color: var(--text);
+}
+
+.game {
+  width: min(420px, 90vw);
+  padding: 2.5rem 2rem;
+  background: var(--card);
+  backdrop-filter: blur(6px);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2.5rem rgba(37, 99, 235, 0.15);
+  text-align: center;
+}
+
+.game__title {
+  margin: 0 0 2rem;
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  letter-spacing: 0.05em;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+}
+
+.scoreboard__entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.scoreboard__score {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.choice {
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.choice:focus,
+.choice:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(37, 99, 235, 0.25);
+}
+
+.choice:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 3px;
+}
+
+.results {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.results__outcome {
+  margin-top: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
