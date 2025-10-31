@@ -1,0 +1,114 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem 3rem;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.scoreboard .label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.score {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(90px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.choice {
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.choice:hover,
+.choice:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(59, 130, 246, 0.35);
+}
+
+.choice:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.results {
+  background: rgba(59, 130, 246, 0.08);
+  padding: 1.25rem;
+  border-radius: 12px;
+}
+
+.result-line {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+}
+
+.outcome {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #101827;
+    color: #e5e7eb;
+  }
+
+  .game {
+    background: rgba(17, 24, 39, 0.9);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
+  }
+
+  .scoreboard .label {
+    color: #94a3b8;
+  }
+
+  .results {
+    background: rgba(59, 130, 246, 0.15);
+  }
+}
