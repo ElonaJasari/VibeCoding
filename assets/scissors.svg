@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="blade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#f1f5f9" />
+      <stop offset="1" stop-color="#cbd5f5" />
+    </linearGradient>
+    <radialGradient id="handle" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#60a5fa" />
+      <stop offset="1" stop-color="#1d4ed8" />
+    </radialGradient>
+  </defs>
+  <g stroke="#1e3a8a" stroke-width="4" stroke-linecap="round">
+    <path fill="url(#blade)" d="M30 66 92 28a4 4 0 0 1 6 5L48 80z" />
+    <path fill="url(#blade)" d="M30 54 92 92a4 4 0 0 1-4 7L44 60z" />
+    <circle cx="34" cy="60" r="14" fill="none" />
+    <circle cx="34" cy="60" r="8" fill="url(#handle)" />
+  </g>
+</svg>
