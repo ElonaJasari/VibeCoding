@@ -19,6 +19,7 @@ buttons.forEach((button) => {
     updateChoices(playerChoice, computerChoice);
     updateScores(result);
     updateOutcome(result);
+    setActiveChoice(playerChoice);
   });
 });
 
@@ -69,4 +70,10 @@ function updateOutcome(result) {
 
 function formatChoice(choice) {
   return choice.charAt(0).toUpperCase() + choice.slice(1);
+}
+
+function setActiveChoice(selectedChoice) {
+  buttons.forEach((button) => {
+    button.classList.toggle("choice--active", button.dataset.choice === selectedChoice);
+  });
 }

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="paperBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#e5e7eb" />
+    </linearGradient>
+    <linearGradient id="paperFold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#cbd5f5" />
+      <stop offset="1" stop-color="#94a3b8" />
+    </linearGradient>
+  </defs>
+  <path
+    fill="url(#paperBody)"
+    stroke="#cbd5f5"
+    stroke-width="4"
+    d="M28 16h50l20 20v68H28z"
+    stroke-linejoin="round"
+  />
+  <path
+    fill="url(#paperFold)"
+    d="M78 16v20h20z"
+  />
+  <path
+    fill="none"
+    stroke="#d4d4d8"
+    stroke-width="3"
+    stroke-linecap="round"
+    d="M38 50h40m-40 14h40m-40 14h28"
+  />
+</svg>
